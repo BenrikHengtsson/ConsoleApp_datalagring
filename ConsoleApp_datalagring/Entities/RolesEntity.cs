@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_datalagring.Entities
 {
-    internal class CategoryEntity
+    internal class RolesEntity
     {
         [Key]
         public int Id { get; set; }
-
-        public string Catagory { get; set; } = null!;
+        public string RoleName { get; set; } = null!;
     }
 }

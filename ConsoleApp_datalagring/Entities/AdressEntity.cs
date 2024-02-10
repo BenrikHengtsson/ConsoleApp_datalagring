@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_datalagring.Entities
 {
-    internal class CategoryEntity
+    internal class AdressEntity
     {
         [Key]
         public int Id { get; set; }
-
-        public string Catagory { get; set; } = null!;
+        public string StreetName { get; set; } = null!;
+        public string PostalCode { get; set; } = null!;
+        public string City { get; set; } = null!;
     }
 }
