@@ -13,5 +13,7 @@ namespace ConsoleApp_datalagring.Entities
         public int Id { get; set; }
 
         public string Catagory { get; set; } = null!;
+        public string CategoryName { get; internal set; }
+        public string CatagoryName { get; internal set; }
     }
 }

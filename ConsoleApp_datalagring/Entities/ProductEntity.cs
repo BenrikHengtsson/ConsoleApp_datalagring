@@ -21,8 +21,7 @@ namespace ConsoleApp_datalagring.Entities
         public int CategoryOd { get; set; }
         //bör göras som nedstående, kan anvandas med joinsatser nu.
         public CategoryEntity Category { get; set; } = null!;
-
-
+        public int CategoryId { get; internal set; }
     }
 }
 

@@ -1,7 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-/*
- Tried to upload my project to github from my macbook, but i use a wierd multi setup virtual maschine through Docker, so cant get it to work.
- I will try again later, but im starting out with transfer the code bit for bit from the "g-uppgift example to see if it works."
--Read other: ConsoleApp_VM_docker
- */ 
+﻿using ConsoleApp_datalagring.Data;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+var builder = Host.CreateDefaultBuilder().ConfigureServices(services => 
+{
+
+    services.AddDbContext<DataContext>(x => x.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\C_Sharp_Projects\ConsoleApp_datalagring\ConsoleApp_datalagring\Data\database.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True"));
+
+}).Build(); 
